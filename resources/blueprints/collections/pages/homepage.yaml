@@ -1,0 +1,131 @@
+title: homepage
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: banners
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_banner:
+              display: 'New Banner'
+              fields:
+                -
+                  import: banner
+          display: banners
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: britam_stats
+        field:
+          display: 'Britam Stats'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: stats_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'stats title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: stats
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_stats:
+              display: 'New Stats'
+              fields:
+                -
+                  import: stats_card
+          display: stats
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: discover_us
+        field:
+          display: 'Discover us'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: discover_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'discover title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: discoveries
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_discovery:
+              display: 'New Discovery'
+              fields:
+                -
+                  import: image_card
+          display: discoveries
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          blueprint: false
+          display: template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

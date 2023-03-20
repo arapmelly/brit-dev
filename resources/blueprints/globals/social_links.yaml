@@ -1,0 +1,50 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: links
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: name
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: icon_class
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'icon class'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: link
+                  field:
+                    display: link
+                    type: link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+          display: links
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible

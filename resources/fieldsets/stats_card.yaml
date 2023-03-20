@@ -1,0 +1,38 @@
+title: 'stats card'
+fields:
+  -
+    handle: icon
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: icon
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: stats
+    field:
+      input_type: text
+      antlers: false
+      display: stats
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: stats_description
+    field:
+      antlers: false
+      display: 'stats description'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible

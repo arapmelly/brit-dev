@@ -1,0 +1,17 @@
+title: 'social links'
+data:
+  links:
+    -
+      id: lffqzuxc
+      name: Facebook
+      icon_class: 'fa fa-facebook'
+      link: facebook.com
+      type: new_set
+      enabled: true
+    -
+      id: lffr0968
+      name: Twitter
+      icon_class: 'fa fa-twitter'
+      link: twitter.com
+      type: new_set
+      enabled: true
