@@ -14,30 +14,21 @@
 @endphp
 
 @foreach ($pages as $page)
-    @if($page->slug == 'home-page')
-    
-        {{-- include banners --}}
-        @php
-            $banners = $page->banners;
-        @endphp
-        @include('partials.banner')
+{{-- {{dd($page)}} --}}
 
-        {{-- include stat cards --}}
-        @php
-            $stats = $page->stats;
-            $stat_title = $page->stats_title;
-        @endphp
-        @include('partials.stat_cards')
+@if(count($page->sections) > 0) 
 
-        {{-- include discover image cards --}}
-        @php
-            $cards = $page->discoveries;
-            $discover_title = $page->discover_title;
-        @endphp
-        @include('partials.content_cards.image_card')
-       
+    @foreach($page->sections as $section)
 
-    @endif
+        @if($section->enabled)
+            
+            @include('partials.'.$section->section)
+        @endif
+
+    @endforeach
+@endif
+
+   
 @endforeach
 
 

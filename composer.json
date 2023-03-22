@@ -11,14 +11,15 @@
     "require": {
         "php": "^8.0",
         "doctrine/dbal": "^3.6",
+        "edalzell/blade-directives": "^3.7",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
+        "jonassiewertsen/statamic-live-search": "^1.6",
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
         "statamic/cms": "3.4.*",
-        "jonassiewertsen/statamic-live-search": "^1.6",
-        "edalzell/blade-directives": "^3.7"
+        "statamic/eloquent-driver": "^1.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
