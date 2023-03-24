@@ -14,15 +14,17 @@
 @endphp
 
 @foreach ($pages as $page)
-{{-- {{dd($page)}} --}}
+
 
 @if(count($page->sections) > 0) 
 
     @foreach($page->sections as $section)
 
+  
+
         @if($section->enabled)
             
-            @include('partials.'.$section->section)
+            @include('partials.'.$section->section_name->slug)
         @endif
 
     @endforeach
