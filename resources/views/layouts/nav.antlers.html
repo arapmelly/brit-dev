@@ -4,7 +4,8 @@
             <nav class="classy-navbar justify-content-between" id="roamingnav">
               
                 <!-- Logo -->
-                <a class="nav-brand mainlogo" href="{{$site_logo->logo_link[0]}}"><img src="{{$site_logo->logo[0]}}" class="web-logo" alt="  {{ $site_logo->logo[0]->alt }}"></a>
+                
+                <a class="nav-brand mainlogo" href="/"><img src="{{ site_settings.website_logo:url }}" class="web-logo" alt="{{ site_settings.website_logo.alt }}"></a>
 
                 <!-- Mobile Serach and Country -->
                 <div class="menu-btnarea d-none">
@@ -24,27 +25,31 @@
                     <!-- Nav Start -->
                     <div class="classynav">
                        
-                        <a class="mobile-logo" href="{{$mobile_logo->logo_link[0]}}"><img src="{{$mobile_logo->logo[0]}}" class="web-logo" alt="  {{ $mobile_logo->logo[0]->alt }}">
+                        <a class="mobile-logo" href="/"><img src="{{ site_settings.website_mobile_logo.url }}" class="web-logo" alt="{{ site_settings.website_mobile_logo.alt }}">
                         </a>
                         <ul id="nav">
                            
                             
-                            @foreach (Statamic::tag('nav:group_main_menu') as $navItem)
+                            {{ nav:group_main_menu }}
                            
-                            <li><a class="page-list-title {{ (Request::path() == $navItem['url']) ? 'active' : '' }}" href="{{$navItem['permalink']}}">{{$navItem['title']}}</a>
-                                @if (count($navItem['children']) > 0)
-
+                            <li>
+                                
+                                <a class="page-list-title " href="{{ url }}">{{ title }}</a>
+                                
+                                {{ if children }}
                                 <ul class="megamenu--mega dropdown">
-                                    @foreach ($navItem['children'] as $item)
-                                    <li><a class="page-list-title" href="{{$item['permalink']}}">{{$item['title']}}</a></li>
-                                    @endforeach
+                                    {{ children }}
+                                    <li><a class="page-list-title" href="{{ url }}">{{ title }}</a></li>
+                                    {{/children }}
                                     
                                 </ul>
+                                {{/if }}
                                     
-                                @endif
+                               
                                 
                             </li>
-                            @endforeach
+
+                            {{ /nav:group_main_menu }}
                            
                         </ul>
 

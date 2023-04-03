@@ -1,0 +1,22 @@
+<section class="main-banner careers-banner">
+   
+  
+
+   {{banners}}
+
+
+    <div class="main-banner-full owl-carousel owl-theme h-100">
+        <div class="container-fluid image-holder h-100" style="background: url('{{ image.url }}') no-repeat center center">
+            <div class="container h-100 p-0">
+                <div class="row align-items-center h-100">
+                    <div class="col-12 col-md-6 p-0 content-banner-holder">
+                        <h1>{{ headline_text }}</h1>
+                        <p>{{ text }}</p>
+                        <a href="{{ cta_link }}" class="btn btn-main btn-red"><span>{{ cta_text }}<i class="fas fa-long-arrow-up"></i></span></a>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   {{/banners}}
+</section>
