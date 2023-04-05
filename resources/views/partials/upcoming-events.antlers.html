@@ -1,0 +1,33 @@
+<section class="events pt-5 pb-5 dark-dots">
+    <div class="container p-0">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-8 col-lg-6 heading">
+                <h2>{{upcoming_events_title}}</h2>
+            </div>
+            <div class="col-12 col-sm-4 col-lg-6 text-end">
+                <a href="{{events_cta_link}}" class="btn btn-main btn-red"><span>{{events_cta}}<i class="fas fa-long-arrow-up"
+                            aria-hidden="true"></i></span></a>
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-12 full-card">
+                <div class="news-and-stories owl-carousel owl-theme">
+                    {{events}}
+                    <div class="p-4 card">
+                        <span class="time-date">{{date_time}}</span>
+                        <h4>{{title}}</h4>
+                        <p>{{text}}
+                        </p>
+                        <a href="{{cta_link}}" class="btn-readmore">{{cta_text}} <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    {{/events}}
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
