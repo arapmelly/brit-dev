@@ -1,0 +1,70 @@
+<section class="bg-grey pt-5 pb-5 life-career dark-dots">
+    <div class="container p-0">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-9 heading">
+                <h2>{{title }}</h2>
+                <p>{{ description }}</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-stretch">
+            <div class="col-12 small-card mb-4">
+                <div class="owl-theme owl-carousel career-slider webcast">
+                    <div class="gallery-holder">
+                       
+                        <!-- First Gallery Image Card Card -->
+                      
+                        <a class="card" href="{{ image[0] }}" data-fancybox="gallery"
+                            style="background-image: url('{{ image[0] }}')">
+                            <div class="gallery-image-holder">
+                                <img src="{{ image[0] }}" class="d-none" width="100%" height="auto" />
+                            </div>
+                            <span class="folder text-end"> <i class="fa-solid fa-folder-open"></i></span>
+                            <div class="webcast-content">
+                                {{ image_title }}
+                            </div>
+                        </a>
+                       
+                       
+                        <!-- End of First Gallery Image Card Card -->
+                           
+                       
+                        <!-- Loop This Gallery Image -->
+                     
+                        {{images}}
+                        <a class="d-none" href="{{ image }}" data-fancybox="gallery">
+                            <img src="{{ image }}" class="d-none" width="100%" height="auto" />
+                        </a>
+                        {{/images}}
+                        
+                       
+                        <!-- Loop This Gallery Image -->
+
+                    </div>
+                    {{cards}}
+                    
+                    <a href="{{ cta_link }}"
+                        class="video-link lightbox-image video-fancybox">
+                        <div class="single-popup-wrap" style="background-image: url('{{ image }}')">
+                            <div class="ht-popup-video video-button">
+                                <div class="video-mark">
+                                    <div class="wave-pulse wave-pulse-1"></div>
+                                    <div class="wave-pulse wave-pulse-2"></div>
+                                </div>
+                                <div class="video-button__two">
+                                    <div class="video-play"> <span class="video-play-icon"></span> </div>
+                                </div>
+                            </div>
+                            <div class="webcast-content">
+                                <h2>{{ name }}</h2>
+                                <p>{{ title }}</p>
+                            </div>
+                        </div>
+                    </a>
+                    {{/cards}}
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

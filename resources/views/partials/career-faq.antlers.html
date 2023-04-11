@@ -1,0 +1,63 @@
+<section class="frequent-asked bg-grey pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 heading mb-4 text-center">
+                <h2>{{title}}</h2>
+            </div>
+            
+            <div class="col-12 d-flex align-items-center ">
+            <nav class="inside-tabs">
+                    <ul class="nav" id="nav-tab" role="tablist">
+                   {{faq_tabs}}
+                      
+                        <li>
+                            <a class="{{faq_status}}" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="{{link}}"
+                                role="tab" aria-controls="{{arialName}}" aria-selected="true">{{title}}</a>
+                        </li>
+                       
+                    {{/faq_tabs}}  
+                    </ul>
+                </nav>
+            </div>
+           
+           
+            <div class="tab-content col-12 pt-5" id="nav-tabContent">
+              {{accordions}}
+               
+                <div class="tab-pane fade {{tab_status}}" id="{{tab_name }}" role="tabpanel" aria-labelledby="{{tab_name}}">
+                    <div class="faq-area pb-3">
+                        <div class="accordion" id="accordionExample">
+                        
+                        {{questions_replicator}}
+                               
+                            <div class="accordion-item">
+                               
+                                <h2 class="accordion-header" id="heading{{id}}">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse{{id}}"
+                                        aria-expanded="false" aria-controls="collapse{{id}}">
+                                        {{question}}
+                                    </button>
+                                </h2>
+                                <div id="collapse{{id}}" class="accordion-collapse collapse"
+                                    aria-labelledby="heading{{id}}" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>{{answer }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/questions_replicator}}
+                            
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                {{/accordions}}
+            </div>
+
+
+        </div>
+    </div>
+</section>

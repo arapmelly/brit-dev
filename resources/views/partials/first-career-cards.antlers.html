@@ -1,0 +1,32 @@
+<section class="bg-grey pt-5 pb-5 view-jobs">
+    <div class="container p-0">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-9 heading">
+                <h2>{{ title}}</h2>
+                <p>{{ description }}</p>
+            </div>
+        </div>
+        <div class="row justify-content-stretch">
+            <div class="col-12 small-card mb-4">
+                <div class="owl-theme owl-carousel three-slider">
+                    
+                    {{cards}}
+                
+                    <div class="card p-0 h-100 mb-0 overflow-hidden">
+                        <div class="image-holder p-0 mb-0">
+                            <img src="{{ image[0] }}" alt="Britam Website Join Us" width="100%">
+                        </div>
+                        <div class="p-4">
+                            <h2>{{ title }}</h2>
+                            <p>{{ description }}<a href="{{ cta_url }}">{{ cta_text }}</a></p>
+                            <a href="{{ button_url }}" class="btn btn-main btn-red"><span>{{ button_text }}<i class="fas fa-long-arrow-up"></i></span></a>
+                        </div>
+                        
+                    </div>
+                    
+                    {{/cards}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

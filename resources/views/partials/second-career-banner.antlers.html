@@ -1,0 +1,22 @@
+<section class="main-banner mid-height banner-icons">
+    <div class="container-fluid image-holder h-100"
+        style="background: url('{{ image[0] }}') no-repeat center center">
+        <div class="container h-100 p-0">
+            <div class="row align-items-center h-100">
+                <div class="col-12 col-lg-12 p-0 content-banner-holder">
+                    <h2>{{ title }}</h2>
+                    <p>{{ description }}</p>
+                    <div class="owl-theme owl-carousel six-cards pt-3">
+                      {{ icons }}
+                        <div class="values text-center">
+                            <span class="icon-holder"><img src="{{ image }}"
+                                    alt="Britam Respect Culture" /></span>
+                            <h3>{{ title }}</h3>
+                        </div>
+                      {{ /icons }}  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

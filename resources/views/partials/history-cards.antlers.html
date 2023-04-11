@@ -1,0 +1,31 @@
+<section class="pt-5 pb-5 full-card history-holder dark-dots">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-9 title-text pl-0">
+                <h4>{{title}}</h4>
+                <p>{{description}}</p>
+            </div>
+        </div>
+       
+        <div class="row">
+           
+            <div class="owl-theme owl-carousel history-slider p-0">
+                {{history}}
+                <div class="card no-bg">
+                    <div class="image-holder">
+                        <img class="rounded-3" src="{{image}}" alt="Britam Website" />
+                    </div>
+                    <div class="history-content">
+                        <span class="history-line"><i class="fas fa-circle"></i></span>
+                        <h2>{{title}}</h2>
+                        <h3>{{date}}</h3>
+                        <p>{{card_description}}</p>
+                    </div>
+                </div>
+                {{/history}}
+            </div>
+           
+        </div>
+       
+    </div>
+</section>

@@ -1,0 +1,65 @@
+<section class="bg-grey pt-5 pb-3 property-holder">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mid-navigation mb-5 d-flex align-items-center">
+                <nav class="inside-tabs">
+                    <ul>
+                        <li><a class="{{status1}}" href="{{tab1_link}}">{{tab1_name}}</a></li>
+                        <li><a class="{{status2}}"href="{{tab2_link}}">{{tab2_name}}</a></li>
+                        <li><a class="{{status3}}" href="{{tab3_link}}">{{tab3_name}}</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row justify-content-stretch">
+        {{cards}}
+            <div class="col-12 col-lg-4 small-card mb-4">
+                <div class="card p-0 h-100 mb-0 overflow-hidden">
+                    <div class="image-holder p-0 mb-0">
+                        <img src="{{ image }}" alt="Britam Website Join Us" width="100%">
+                    </div>
+                    <div class="p-4">
+                        <h2>{{title}}</h2>
+                        <p>{{location}}
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-readmore" data-bs-toggle="modal"
+                            data-bs-target="#{{modal}}">{{cta_text}} <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Muchiru -->
+           
+            <div class="modal fade britam-modal" id="{{modal}}" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
+                                class="fa-regular fa-circle-xmark"></i></button>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 full-card">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-md-4 text-center p-0 card overflow-hidden mb-0">
+                                            <img src="{{image}}" class="rounded-3"
+                                                alt="Britam Website Join Us">
+                                        </div>
+                                        <div class="col-12 col-md-8 p-5 modal-hieght">
+                                            <h2>{{title}}</h2>
+                                            <h4>{{location}}</h4>
+                                            <p>{{description}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           {{/cards}}
+
+        </div>
+    </div>
+</section>

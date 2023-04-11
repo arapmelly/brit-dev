@@ -1,0 +1,25 @@
+<section class="bg-grey pt-5 property-holder">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 heading">
+                <h2>{{title}}</h2>
+            </div>
+        </div>
+        <div class="row justify-content-stretch">
+        {{cards}}
+            <div class="col-12 col-sm-6 col-lg-4 small-card mb-4">
+                <div class="card p-0 h-100 mb-0 overflow-hidden">
+                    <div class="image-holder p-0 mb-0">
+                        <img src="{{ image }}" alt="Britam Website Join Us" width="100%">
+                    </div>
+                    <div class="p-4">
+                        <h2>{{title}}</h2>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            </div>
+            
+        {{/cards}}
+        </div>
+    </div>
+</section>
