@@ -61,10 +61,10 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
   p{
     font-weight: 400 !important;
     font-family: 'Tahoma';
-    margin-bottom: 1.5rem;
-    line-height: 24px;
-    font-size: 14px;
-    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+    line-height: 20px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
   }
   .classynav ul li.cn-dropdown-item{
     position: relative;
@@ -76,7 +76,7 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
   }
   .btn-main{
     margin: 0;
-    border: 2px solid  #0077BE66;
+    border: 1px solid  #0077BE66;
     color: #0077BE;
     font-size: 16px;
     text-transform: capitalize;
@@ -403,11 +403,10 @@ footer ul li a:hover{
   border-radius: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 24px;
   color: #fff;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   margin: 0;
-
 }
 .footer-last .social-icons li{
   padding-left:15px;
@@ -523,7 +522,7 @@ footer ul li a:hover{
 }
 .news-and-stories .content-area h4, .webcast .content-area h4{
   margin-bottom: 1rem;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 25px;
   letter-spacing: 0.8px;
@@ -576,7 +575,7 @@ footer ul li a:hover{
   color:  #E42312;
 }
 .news-and-stories .card:hover .content-area::after{
-  background: linear-gradient(360deg, rgb(137 5 5) 0%, rgba(255,255,255,0) 99%);
+  background: linear-gradient(360deg, #1a2330 0%, rgb(255 255 255 / 0%) 99%);
 }
 .unbank-business h3{
   font-weight: 700;
@@ -1399,6 +1398,10 @@ nav .classynav ul li a:hover::after,.classynav ul li .active::after{
     .main-banner{
       height: 400px;
     }
+    .mini-banner {
+      height: 200px !important;
+      overflow: hidden;
+    }
     .video-content h1{
       font-size: 50px;
     }
@@ -1893,8 +1896,12 @@ article h4, .content-section h4{
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
 }
-article ul, .content-section ul{
+article ul, .content-section ul, ol{
   padding-left: 15px;
+  font-size: 15px;
+}
+article ul li, .content-section ul li, ol li{
+  margin-bottom: 0;
 }
 .calculator{
   width: 100%;
@@ -2492,15 +2499,11 @@ nav .classynav ul li, nav .classynav ul, .nav-pills li{
   transform: rotate(35deg) !important;
   font-weight: 300;
 }
-.classy-menu {
-  width: 90%;
-}
 .full-card h4{
   font-weight: bold;
   margin: 0 0 1rem 0;
   color: #0077BE;
-  font-size: 18px;
-  letter-spacing: 0.8px;
+  font-size: 24px;
 }
 .small-card h2{
   font-weight: bold;
@@ -2531,7 +2534,7 @@ nav .classynav ul li, nav .classynav ul, .nav-pills li{
   width: 100%;
   height: 100%;
   background: rgb(2,0,36);
-  background: linear-gradient(360deg, rgba(2,0,36,0.6502976190476191) 13%, rgb(0 0 0 / 30%) 100%);
+  background: linear-gradient(360deg, rgba(2,0,36,0.6502976190476191) 13%, rgb(0 143 222 / 30%) 100%);
   position: absolute;
   left: 0;
   top: 0;
@@ -2727,7 +2730,7 @@ nav .classynav ul li, nav .classynav ul, .nav-pills li{
   top: 10px;
   right: 1rem;
   font-size: 22px;
-  z-index: 99;
+  z-index: 9;
 }
 .related .card:hover span{
   color: #0077BE;
@@ -2917,8 +2920,9 @@ article h1, article .heading h1{
   letter-spacing: 0.8px;
 }
 article p,.content-section p{
-  line-height: 31px;
+  line-height: 22px;
   width: 90%;
+  margin-bottom: 1rem;
 }
 .time-date {
   font-size: 14px;
@@ -3193,6 +3197,7 @@ label{
 }
 .life-career .card:hover{
   box-shadow: none;
+
 }
 .video-background {
     position: absolute;
@@ -3213,13 +3218,9 @@ label{
   animation: 0.4s 0.1s fadeInLeft both;
 }
 .webcast .video-link:hover .single-popup-wrap::after, .card:hover .gallery-image-holder::after{
-  background: linear-gradient(0deg, rgb(160 33 33 / 74%) 19%, rgba(0, 212, 255, 0) 100%);
+  background: linear-gradient(0deg, rgb(0 0 0 / 74%) 19%, rgba(0, 212, 255, 0) 100%);
 }
 @media only screen and (max-width: 991px){
-  .breadcramps a::after{
-    font-size: 7px;
-    padding-left: 7px;
-  }
   .content-banner-holder h1{
     font-size: 22px;
     letter-spacing: 1px;
@@ -3267,14 +3268,14 @@ label{
     letter-spacing: 1px;
   }
   .breadcramps a{
-    font-size: 8px;
+    font-size: 10px;
   }
   .breadcramps ul{
     padding: 6px 0;
     margin: 5px;
   }
   .heading h1, .content-banner-holder h2{
-    font-size: 20px;
+    font-size: 22px;
   }
   .inside-tabs ul li a{
     padding: 10px 0.8rem;
@@ -3318,7 +3319,7 @@ label{
     padding: 0 15px !important;
   }
   .history-line::before{
-    width: 40px;
+    width: 60px;
   }
   .history-line::after{
     height: 40px;
@@ -3333,9 +3334,8 @@ label{
   .up-btn{
     font-size: 15px;
   }
-  .news-and-stories .owl-item, .history-slider .owl-item{
+  .news-and-stories .owl-item{
     margin-right: 17px !important;
-    width: 300px !important;
   }
   .leadership-board {
     padding-top: 1rem !important;
@@ -3363,7 +3363,7 @@ label{
   }
   .col-12.card.full-card {
     width: 93%;
-    margin: 0 auto 1.5rem;
+    margin: auto;
   }
   .content-padding, .title-text {
     padding-left: 15px !important;
@@ -3379,7 +3379,7 @@ label{
     font-size: 18px;
   }
   article p, .content-section p {
-    line-height: 22px;
+    line-height: 25px;
     width: 100%;
   }
   .share-btns ul li a{
@@ -3404,7 +3404,7 @@ label{
   .content-section {
     padding-bottom: 1.5rem;
   }
-  .history-slider .no-bg, .history-slider .owl-item{
+  .history-slider .no-bg{
     width: 300px;
     padding: 15px !important;
     margin: 0 !important;
@@ -3413,7 +3413,7 @@ label{
     width: 300px;
   }
   .webcast .single-popup-wrap, .webcast .card{
-    min-height: 250px;
+    min-height: 300px;
   }
   .owl-theme .owl-nav, .career-slider{
     margin-top: 1.5rem;
@@ -3546,7 +3546,7 @@ nav .classynav .countries li a::after{
   animation: 0.8s ease 0.1s 1 normal both running fadeInUp;
 }
 .menu-btnarea .btn-main:hover{
-  border: 2px solid  #E42312;
+  border: 1px solid  #E42312;
 }
 .countries li a:hover img{
   -webkit-animation: 0.1s 0.2s fadeInUp both;
@@ -3685,15 +3685,15 @@ nav .classynav .countries li a::after{
 }
 .modal li{
   font-family: 'Tahoma';
-  margin-bottom: 0.8rem;
-  line-height: 24px;
-  font-size: 14px;
+  margin-bottom: 0rem;
+  font-size: 15px;
 }
 .events .starts-holder .card{
   padding: 1.5rem 1.5rem 0;
 }
 .leadership-board .related .card{
-  height: 200px;
+  height: 220px;
+  margin-bottom: 0.5rem;
 }
 .leadership-board .related .modal .card {
   height: auto;
@@ -3705,8 +3705,8 @@ nav .classynav .countries li a::after{
   letter-spacing: 0.8px;
   -webkit-box-shadow: 0px 3px 14px -7px #e42312;
   box-shadow: 0px 3px 14px -7px #e42312;
-  -webkit-animation: 0.5s 0.1s fadeInUp both;
-  animation: 0.5s 0.1s fadeInUp both;
+  -webkit-animation: 0.5s 0.1s fadeInDown both;
+  animation: 0.5s 0.1s fadeInDown both;
   margin:2rem 0;
 }
 .error-message h6, .error-message h4, .error-message h2, .error-message h3, .error-message p{
@@ -3742,4 +3742,88 @@ nav .classynav .countries li a::after{
 }
 .news-stories .mt-3 {
   margin-top: 0rem!important;
+}
+.bg-blue {
+  background: #e8eef1;
+}
+.related .view-pofile{
+  position: relative;
+  left: 0;
+  top: 0;
+  right: inherit;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.description{
+  text-decoration: none;
+  color: #212529;
+}
+.leadership-board .description h3{
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #277ac0;
+}
+.description:hover{
+  color: #e73631;
+  transition: all ease-in-out 0.5s;
+}
+.description p{
+  margin-bottom: 10px;
+}
+.mini-banner{
+  height: 250px;
+  overflow: hidden;
+}
+.classy-menu {
+    min-width: 78%;
+}
+.new-footer{
+  justify-content: space-between;
+  color: #fff;
+}
+.new-footer a{
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+.new-footer li{
+  margin-bottom: 0;
+}
+.new-footer .title {
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin-bottom: inherit;
+  font-size: 16px;
+}
+table{
+  width: 100%  !important;
+}
+table td{
+  font-weight: 400 !important;
+  font-family: 'Tahoma';
+  margin-bottom: 1rem;
+  line-height: 20px;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+@media only screen and (max-width: 991px){
+  .new-footer .title {
+    font-size: 13px;
+  }
+  .new-footer{
+    display: block !important;
+    column-count: 2;
+  }
+  .footer-list{
+    width: 50%;
+  }
+}
+
+.events .full-card h4{
+  font-size: 18px;
+  letter-spacing: 0.3px;
 }

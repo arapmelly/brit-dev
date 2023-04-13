@@ -1,25 +1,26 @@
-<section class="additional pt-5 pb-5 bg-grey">
+
+<section class="additional pt-5 pb-5 {{background_color}}">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center heading">
-                <h2>{{investor_footer_title}}</h2>
+                <h2>{{footer:footer_title}}</h2>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-12 col-sm-6 col-lg-4 small-card starts-holder">
                 <div class="card p-0 h-100 mb-0 overflow-hidden">
                     <div class="image-holder p-0 mb-0">
-                        <img src="{{investor_footer_image}}" alt="Britam Website Join Us" width="100%">
+                        <img src="{{footer:image}}" alt="Britam Website Join Us" width="100%">
                     </div>
                     <div class="p-4">
-                        <h2>{{investor_footer_image_list_title}}</h2>
+                        <h2>{{footer:image_list_title}}</h2>
                         <ul class="starts">
-                            {{investor_footer_links}}
+                            {{footer:links}}
                             <li>
                                 <a href="{{ link }}"><span>{{title}}</span> <i
                                         class="fa-solid fa-arrow-right"></i></a>
                             </li>
-                            {{/investor_footer_links}}
+                            {{/footer:links}}
                            
                             
                         </ul>
@@ -28,20 +29,20 @@
             </div>
             <div class="col-12 col-sm-6 col-lg-4 small-card">
                 <div class="card p-0 h-100 mb-0 overflow-hidden">
-                    <img src="{{contact_card_image}}" alt="Britam Website Join Us" width="100%">
+                    <img src="{{footer:contact_card_image}}" alt="Britam Website Join Us" width="100%">
                     <div class="p-4 get-in-touch">
-                        <h2><img src="{{contact_card_icon}}" alt="Get In touch" />{{contact_card_title}}</h2>
+                        <h2><img src="{{footer:contact_card_icon}}" alt="Get In touch" />{{footer:contact_card_title}}</h2>
                         <p><strong>Email:</strong> <a target="_blank"
-                                href="mailto:investorrelations@britam.com ">{{contact_card_email}}</a>
+                                href="mailto:investorrelations@britam.com ">{{footer:contact_card_email}}</a>
                         </p>
-                        <p><strong>Telephone:</strong> <a href="tel:+254 703 094000" target="_blank">{{contact_card_phone}}</a></p>
+                        <p><strong>Telephone:</strong> <a href="tel:{{footer:contact_card_phone}}" target="_blank">{{footer:contact_card_phone}}</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-4 small-card">
                 <div class="card p-0 h-100 mb-0 overflow-hidden">
                     <div class="p-4 get-in-touch">
-                        <h2><img src="{{feedback_card_icon}}" alt="Get In touch" />{{feedback_card_title}}</h2>
+                        <h2><img src="{{footer:feedback_card_icon}}" alt="Get In touch" />{{footer:feedback_card_title}}</h2>
                         {{# <form class="pt-3">
                             <div class="form-group">
                                 <label>Name</label>
