@@ -1,37 +1,47 @@
+
 <footer class="main-footer pt-5 pb-5">
     <div class="container">
-        <div class="row">
-           
+       
+            <div class="row"> 
+                <div class="col-12 col-lg-8 new-footer d-flex justify-between">
+                    {{ nav:group_footer }}
+                        
+                    <ul class="footer-list">
+                        
+                        <li class="title">{{title}}</li>
+                        {{if children}}
+                        {{children}}
+                        <li><a href="{{url}}">{{title}}</a></li>
+                        {{/children}}
+                        {{/if}}
+                    </ul>
+                    {{ /nav:group_footer }}
+                   
+                </div>
+                
+            </div>
             <div class="col-12 social-icons text-center">
                 <ul class="d-flex align-items-center justify-content-center">
-                     
-                    
-                        
-                        <li><a href=""><i class=""></i></a></li>
-  
-                
-                    
-                </ul>
+                {{ collection:footer }}
+                {{ links }}
+                <li><a href="{{ social_link }}"><i class="{{ social_class }}"></i></a></li>
+                {{ /links }}
+                {{ /collection:footer }}
+                 </ul>               
+             
             </div>
-            <div class="row footer-last">
-                <div class="col-12 copyright text-center">
-
-                    
-                    <ul>
-                       
-                        <li><a href=""></a></li>
-                      
-                       
-                    </ul>
-                </div>
-            </div>
-        </div>
+           
+          
+       
         <span class="footer-line"></span>
         <div class="row pt-4 footer-last">
             <div class="col-12">
                 <ul class="d-flex align-items-center justify-content-between">
-                    <li>© 2023 Britam. All Rights Reserved.</li>
-                    <li>Regulated by the Insurance Regulatory Authority</li>
+                    {{ collection:footer }}
+                
+                    <li>{{britam_rights}}</li>
+                    <li>{{britam_regulator}}</li>
+                   {{/collection:footer}}
                 </ul>
             </div>
         </div>
