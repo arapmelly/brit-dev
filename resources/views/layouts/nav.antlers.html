@@ -34,7 +34,7 @@
                            
                             <li>
                                 
-                                <a class="page-list-title " href="{{ url }}">{{ title }}</a>
+                                <a  class="page-list-title " {{ if is_current || is_parent }} class="page-list-title active" {{ /if }} href="{{ url }}">{{ title }}</a>
                                 
                                 {{ if children }}
                                 <ul class="megamenu--mega dropdown">

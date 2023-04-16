@@ -1398,6 +1398,10 @@ nav .classynav ul li a:hover::after,.classynav ul li .active::after{
     .main-banner{
       height: 400px;
     }
+    .mini-banner {
+      height: 200px !important;
+      overflow: hidden;
+    }
     .video-content h1{
       font-size: 50px;
     }
@@ -1892,7 +1896,7 @@ article h4, .content-section h4{
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
 }
-article ul, .content-section ul{
+article ul, .content-section ul, ol{
   padding-left: 15px;
   font-size: 15px;
 }

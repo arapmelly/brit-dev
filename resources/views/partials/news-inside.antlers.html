@@ -1,0 +1,39 @@
+<article class="inside-content-holder bg-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-11 pt-5 pb-3 article-holder heading">
+                <span class="date">{{date}}</span>
+                <h1>{{title}}</h1>
+                {{!!content!!}}
+
+                
+            </div>
+            <div class="col-12">
+                <div class="share-btns mb-5">
+                    <div class="social-holder d-flex align-items-center">
+                        {{? 
+                            $currentUrl = url()->current();
+                        ?}}
+                        
+                        <span>Share:</span>
+                        <ul class="d-flex align-items-center m-0">
+                            
+                            <li><a href="#" target="_blank" rel="nofollow" title="facebook"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" rel="nofollow" title="twitter"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" rel="nofollow" title="instagram"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" rel="nofollow" title="linkedin"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,76 @@
+<div x-data="{ selectedYear: ''}">
+
+    <section class="inside-content-holder bg-grey pt-5" >
+        <div class="container p-0">
+            <div class="row pb-5 align-items-center">
+                <div class="col-12 col-sm-7 col-lg-9 heading"> 
+                    <nav class="inside-tabs">
+                        <ul>
+                            {{tabs}}
+                            <li><a {{ if is_active }}class="active" {{/if}} href="{{tab_link}}"> {{tab_name}} </a></li>
+                            {{/tabs}}
+                           
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-sm-5 col-lg-3 filters d-flex align-items-center">
+                    <div class="input-group"  >
+                        <select class="form-select" aria-label="Default select example" id="year" x-model="selectedYear">
+                           
+                            {{list_cards}}
+                            <option value="{{list_year:title}}" >{{list_year:title}}</option> 
+                            {{/list_cards}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="full-year bg-grey pb-5"  >
+        <div class="container">
+            <div class="row" id="search-results"></div>
+            <div class="row" id="search-query">
+    
+               
+                
+                {{ list_cards  }} 
+               
+              
+                <div class="col-12 col-sm-6 col-lg-4 small-card starts-holder mb-4" x-show="selectedYear == {{list_year:title}} || selectedYear == '' " > 
+
+                   
+                    <div class="card p-0 h-100 mb-0 overflow-hidden">
+                        <div class="p-4">
+                            <h2>{{list_year:title}}</h2>
+                            <ul class="starts">
+                                {{lists}}
+                                <li>
+                                    <a href="{{list_link}}" target="_blank"><span>{{list_name}}</span> <i class="fa-solid fa-arrow-right"></i></a>
+                                </li>
+                                {{/lists}}
+                               
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                
+               
+
+                
+               
+                {{ /list_cards}}
+               
+                
+                
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+
