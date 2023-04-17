@@ -1,49 +1,57 @@
-<section class="bg-grey pt-5 press-holder pb-5">
-    <div class="container">
-        <div class="row mb-5 align-items-center">
-            <div class="col-12 col-sm-6 col-lg-5 heading">
-                <h2>{{news_title}}</h2>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-7 filters d-flex align-items-center">
-                <div class="input-group">
-                    <div id="search-autocomplete" class="form-outline form-control">
-                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                        <input type="search" name="searchword" id="mod-ajaxsearch-searchword"
-                            placeholder="Search..." maxlength="200" value="Search..." autocomplete="off"
-                            onblur="if (this.value=='') this.value='Search...';"
-                            onfocus="if (this.value=='Search...') this.value='';">
+<div x-data="{ selectedYear: '', searchKeyword: ''}" x-init="selectedYear = (new Date()).getFullYear().toString()">
+    <section class="bg-grey pt-5 press-holder pb-5">
+        <div class="container">
+            <div class="row mb-5 align-items-center">
+                <div class="col-12 col-sm-6 col-lg-5 heading">
+                    <h2>{{news_title}}</h2>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-7 filters d-flex align-items-center">
+                    <div class="input-group">
+                        <div id="search-autocomplete" class="form-outline form-control">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            <input type="search" name="searchword" id="mod-ajaxsearch-searchword"
+                                placeholder="Search..." maxlength="200" value="Search..." autocomplete="off"
+                                x-model="searchKeyword"
+                                @input="searchArticles"
+                                onblur="if (this.value=='') this.value='Search...';"
+                                onfocus="if (this.value=='Search...') this.value='';">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <select class="form-select" aria-label="Default select example" id="year" x-model="selectedYear" @change="filterArticles">
+                            
+                            {{collection:years}}
+                           
+                            <option value="{{title}}">{{title}}</option>
+                            
+                            {{/collection:years}}
+                        </select>
                     </div>
                 </div>
-                <div class="input-group">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected="">Year</option>
-                        {{collection:years}}
-                       
-                        <option value="{{title}}">{{title}}</option>
-                        
-                        {{/collection:years}}
-                    </select>
+            </div>
+    
+            <div class="row justify-content-stretch" >
+                {{collection:article}}
+                <div class="col-12 col-lg-3 small-card mb-4" x-show="selectedYear == {{title}} || selectedYear == '' ">
+                    
+                    <div class="card p-0 h-100 mb-0 overflow-hidden">
+                        <div class="image-holder p-0 mb-0">
+                            <img src="{{image}}" alt="Britam Website Join Us" width="100%">
+                        </div>
+                        <div class="p-3">
+                            {{--<span class="min-head">{{published_date}}</span>--}}
+                            <h2>{{content_title}}</h2>
+                            <p>{{description}}</p>
+                            <a href="{{cta_link}}" class="btn btn-readmore">{{cta_text}} <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
+               {{/collection:article}}
             </div>
         </div>
-
-        <div class="row justify-content-stretch">
-            {{collection:article}}
-            <div class="col-12 col-lg-3 small-card mb-4">
-                <div class="card p-0 h-100 mb-0 overflow-hidden">
-                    <div class="image-holder p-0 mb-0">
-                        <img src="{{image}}" alt="Britam Website Join Us" width="100%">
-                    </div>
-                    <div class="p-3">
-                        <span class="min-head">{{date}}</span>
-                        <h2>{{title}}</h2>
-                        <p>{{description}}</p>
-                        <a href="{{cta_link}}" class="btn btn-readmore">{{cta_text}} <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-           {{/collection:article}}
-        </div>
+    </section>
     </div>
-</section>
+    
+   
+    

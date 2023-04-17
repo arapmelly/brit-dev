@@ -12,4 +12,41 @@ integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO0
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="/britam/js/main.js" type="text/Javascript"></script>
+<script>
+    function search() {
+      return {
+        searchQuery: '',
+        selectedYear: ''
+      };
+    }
+  </script>
+
+<script>
+    function searchArticles() {
+        let keyword = this.searchKeyword.toLowerCase();
+        let articles = document.querySelectorAll('.small-card');
+        articles.forEach(article => {
+            let title = article.querySelector('h2').innerText.toLowerCase();
+            let description = article.querySelector('p').innerText.toLowerCase();
+            if (title.includes(keyword) || description.includes(keyword)) {
+                article.style.display = 'block';
+            } else {
+                article.style.display = 'none';
+            }
+        });
+    }
+
+    function filterArticles() {
+        let selectedYear = this.selectedYear;
+        let articles = document.querySelectorAll('.small-card');
+        articles.forEach(article => {
+            let year = article.getAttribute('data-year');
+            if (selectedYear == year || selectedYear == '') {
+                article.style.display = 'block';
+            } else {
+                article.style.display = 'none';
+            }
+        });
+    }
+</script>
 
