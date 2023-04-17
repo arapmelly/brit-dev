@@ -1,0 +1,17 @@
+{{!-- Loop through all collections --}}
+{{ foreach collections as:collection }}
+    {{!-- Perform search within each collection --}}
+    {{ search:results query="{{ query }}" index="{{ collection }}" as:results }}
+        {{!-- Display search results --}}
+        {{ if results:count > 0 }}
+            <h2>{{ collection:title }} Results</h2>
+            <ul>
+                {{ foreach results }}
+                    <li><a href="{{ url }}">{{ title }}</a></li>
+                {{ /foreach }}
+            </ul>
+        {{ else }}
+            <p>No results found in {{ collection:title }}</p>
+        {{ /if }}
+    {{ /search:results }}
+{{ /foreach }}

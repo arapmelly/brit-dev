@@ -1,0 +1,7 @@
+<form action="/search" method="get">
+    <input type="search" name="query" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+
+{{!-- Include search results partial and pass search query --}}
+{{ partial:_search-results query="{{ query }}" }}
