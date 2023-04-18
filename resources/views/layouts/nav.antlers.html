@@ -54,12 +54,15 @@
                         </ul>
 
                         <div class="menu-btnarea">
-                           
-    
-                            <a class="btn btn-main search" href="">
-                                <span><i class="fa-sharp fa-solid fa-magnifying-glass"></i>Search</span>
+                            {{ collection:pages }}
+                            {{ if title == 'Search' }}
+                            <a class="btn btn-main search" href="{{url}}">
+                                <span><i class="fa-sharp fa-solid fa-magnifying-glass"></i>{{title}}</span>
                             </a>
-                               
+                            {{ /if }}
+                            {{ /collection:pages }}
+                        
+                           
                                
                             <button class="btn btn-main country-desktop">
                                 <span>Choose your country <i class="fa-sharp fa-solid fa-earth-americas"></i> <i

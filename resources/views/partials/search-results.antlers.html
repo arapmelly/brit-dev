@@ -1,17 +1,57 @@
-{{!-- Loop through all collections --}}
-{{ foreach collections as:collection }}
-    {{!-- Perform search within each collection --}}
-    {{ search:results query="{{ query }}" index="{{ collection }}" as:results }}
-        {{!-- Display search results --}}
-        {{ if results:count > 0 }}
-            <h2>{{ collection:title }} Results</h2>
-            <ul>
-                {{ foreach results }}
-                    <li><a href="{{ url }}">{{ title }}</a></li>
-                {{ /foreach }}
-            </ul>
-        {{ else }}
-            <p>No results found in {{ collection:title }}</p>
-        {{ /if }}
-    {{ /search:results }}
-{{ /foreach }}
+<section class="search-result pb-5 pt-5">
+        <div class="container p-0">
+            <div class="row pb-5 align-items-center">
+                <div class="col-12 col-lg-6 filters d-flex align-items-center">
+                    <div class="input-group p-0">
+                        <div id="search-autocomplete" class="form-outline form-control">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            <input type="search" name="q" id="mod-ajaxsearch-searchword"
+                                placeholder="Search..." maxlength="200" value="Search..." autocomplete="off"
+                                onblur="if (this.value=='') this.value='Search...';"
+                                onfocus="if (this.value=='Search...') this.value='';">
+                            <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 heading">
+                    <h2>Search</h2>
+                </div>
+                <div class="col-12 results-holder">
+    
+                        <ul class="p-0">
+    
+                            {{ search:results index="default" }}
+    
+                            {{ if no_results }}
+    
+                                <h2>No results found for {{ get:q }}.</h2>
+    
+                            {{ else }}
+    
+                            <li class="d-flex align-items-center justify-content-between">
+    
+                                <a class="title" href="{{url}}" target="_blank">
+    
+                                    <h4>{{title}}</h4>
+    
+                                    <span>https://britam.isobarkenya.com/{{url}}</span>
+    
+                                </a>
+    
+                            </li>
+    
+                            {{/if}}
+    
+                            {{/search:results }}
+    
+                            
+    
+                        </ul>
+    
+                    </div>
+            </div>
+        </div>
+    </section>
+
